@@ -1,0 +1,304 @@
+/*---------------------------------------------------------------
+ Global styles
+----------------------------------------------------------------*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+/* 
+-------------------------------------------------------------------------------
+HTML elements 
+-------------------------------------------------------------------------------
+*/
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background:#89C15E;
+}
+
+.scoreboard {
+  width: 700px;
+  height: 150px;
+  border-radius: 15px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+.scored
+{
+  display: flex;
+}
+.title {
+  padding-left: 30px;
+  
+}
+
+.score1 {
+  width: 150px;
+  height: 114px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.score {
+  width: 150px;
+  height: 114px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.score h1, .score1 h1{
+  color:#252525;
+  font-size: 56px;
+  font-family: "Barlow", sans-serif;
+}
+
+.score p, .score1 p {
+  color:#656565;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 17px;
+line-height: 20px;
+letter-spacing: 0.1em;
+text-align: center;
+}
+
+.hands {
+  background-image: url("../assets/triangle.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+  width: 476px;
+  height: 430px;
+  margin-top: 100px;
+  display: flex;
+  z-index: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.hands img {
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+
+.hands .paper {
+  margin-right: 20px;
+}
+
+.hands .scissors {
+  margin-left: 20px;
+}
+
+.hands .hand {
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.hands .hand:hover {
+  transform: translate3d(0px, -8px, 0px);
+}
+
+.contest {
+  display: flex;
+  margin-top: 50px;
+  width: 0 auto;
+
+}
+
+.contest img {
+  width: 275px;
+  height: 275px;
+}
+
+.contest > div {
+  flex: 1;
+}
+
+.contest h1 {
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.contest .newGame {
+  color: hsl(229, 25%, 31%);
+  background-color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.next1 {
+  position: absolute;
+  color: hsl(229, 25%, 31%);
+  background-color: #89C15E;
+  padding: 11px 17px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+  bottom: 20px;
+  right: 20px;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 25px;
+letter-spacing: 0.1em;
+border: 2px solid #FFFFFF;
+border-radius: 10px;
+
+color: #FFFFFF;
+}
+#rules {
+  position: absolute;
+  color: hsl(229, 25%, 31%);
+  background-color:#89C15E;
+  padding: 11px 17px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+  bottom: 20px;
+  right: 20px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 25px;
+letter-spacing: 0.1em;
+border: 2px solid #FFFFFF;
+border-radius: 10px;
+
+color: #FFFFFF;
+}
+.newGame:hover {
+  background: rgb(218, 218, 218);
+  transform: translate3d(0px, -2px, 0px);
+}
+.next1:hover,#rules:hover {
+ 
+  transform: translate3d(0px, -2px, 0px);
+}
+
+.contest .handImageContainer {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.referee {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.referee h1 {
+  font-size: 45px;
+  color: white;
+}
+
+.computerhand {
+  display: flex;
+  flex-direction: column;
+}
+
+.winning{
+  background: rgba(46, 154, 37, 0.39);
+  background-image: radial-gradient(rgb(26, 179, 26) 60%, rgb(75, 231, 75) 20%, rgb(56, 133, 56) 20%);
+  box-shadow: 0px 1px 62px rgba(0, 0, 0, 0.13);
+  border-radius: 50%;
+  height: 425px;
+  width: 400px;
+ 
+
+}
+
+.ruless{
+box-sizing: border-box;
+position: absolute;
+width: 285px;
+height: 325px;
+right:40px;
+bottom: 90px;
+
+background: #004429;
+border: 7px solid #FFFFFF;
+border-radius: 13px;
+}
+.gameheading{
+  width: 260px;
+  height: 27px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 34px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.listitems li
+{
+position: relative;
+width:235px;
+margin-bottom: 17px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 15px;
+list-style-type: none;
+color: #FFFFFF;
+margin-left: 26px;
+}
+
+.cancel{
+
+position: absolute;
+width: 54px;
+height: 54px;
+right:20px;
+bottom: 386px;
+}
+.rect{
+position: absolute;
+width: 8px;
+height: 8px;
+left: -19px;
+top: 12px;
+
+background: #FFD600;
+}
